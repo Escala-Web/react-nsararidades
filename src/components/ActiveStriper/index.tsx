@@ -3,7 +3,6 @@ import { useStore } from "../../hooks/Store/useStore";
 import { DashboardTemplate } from "../DashboardTemplate";
 
 export const ActiveStriper = ({ reason }) => {
-	console.log(reason);
 
 	const { findAllStore } = useStore();
 	const { onBoarding } = useOnboarding();

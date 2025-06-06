@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "noEmitOnError": false,     // ← ESSENCIAL: permite build com erro
-    "skipLibCheck": true,       // ← ignora erros em dependências
-    "strict": false,            // ← desativa verificação mais rígida
+    "noEmitOnError": false,
+    "skipLibCheck": true, 
+    "strict": false,  
     "forceConsistentCasingInFileNames": false,
     "jsx": "react-jsx",
     "module": "ESNext",

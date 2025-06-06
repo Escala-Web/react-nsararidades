@@ -7,7 +7,6 @@ import { Login } from "../pages/Dashboard/pages/Login";
 import { PageContruct } from "../pages/templates/PageContruct";
 import { useStore } from "../hooks/Store/useStore";
 import { Loading } from "../components/Loading";
-import { Onboarding } from "../components/Onboarding";
 import { ActiveStriper } from "../components/ActiveStriper";
 import { FilterProvider } from "../context/Filter";
 import { ScrollToTop } from "../components/ScrollToTop";
@@ -46,8 +45,6 @@ export const RouteApp = () => {
 							element={
 								<>
 									<PrivateRoute>
-										
-										
 										
 											<>
 												<DashboardRoute />
