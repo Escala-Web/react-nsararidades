@@ -1,0 +1,16 @@
+.status-pendente {
+	background-color: #ffa60033 !important; /* Amarelo claro */
+}
+.status-processando {
+	background-color: #007bff4a !important; /* Azul claro */
+}
+.status-transporte {
+	background-color: #17a3b848 !important; /* Verde claro */
+}
+.status-cancelado {
+	background-color: #f8d7da !important; /* Vermelho claro */
+}
+
+.status-concluido {
+	background-color: #28a7462a !important; /* Vermelho claro */
+}

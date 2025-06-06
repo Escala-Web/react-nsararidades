@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "noEmitOnError": false,     // ← ESSENCIAL: permite build com erro
+    "skipLibCheck": true,       // ← ignora erros em dependências
+    "strict": false,            // ← desativa verificação mais rígida
+    "forceConsistentCasingInFileNames": false,
+    "jsx": "react-jsx",
+    "module": "ESNext",
+    "target": "ESNext",
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "isolatedModules": true,
+    "noEmit": true 
+  },
+  "include": ["src"]
+}

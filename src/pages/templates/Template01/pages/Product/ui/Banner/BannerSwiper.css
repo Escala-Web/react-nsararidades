@@ -1,0 +1,48 @@
+.bannerSwiper {
+	width: 900px;
+	height: 700px;
+}
+
+@media (max-width: 1100px) {
+	.bannerSwiper {
+		width: 999px;
+		height: 750px;
+	}
+}
+
+@media (max-width: 1100px) {
+	.bannerSwiper {
+		width: 999px;
+		height: 750px;
+	}
+}
+
+@media (max-width: 769px) {
+	.bannerSwiper {
+		width: 760px;
+		height: 580px;
+	}
+}
+
+@media (max-width: 425px) {
+	.bannerSwiper {
+		width: 420px;
+		height: 350px;
+	}
+}
+
+@media (max-width: 376px) {
+	.bannerSwiper {
+		width: 380px;
+		height: 350px;
+	}
+}
+
+.bannerSwiper .swiper-button-prev,
+.bannerSwiper .swiper-button-next {
+	color: #333;
+}
+
+.bannerSwiper .swiper-pagination-bullet-active {
+	background-color: #000;
+}
