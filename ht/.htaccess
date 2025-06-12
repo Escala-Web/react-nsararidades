@@ -1,0 +1,16 @@
+# Ativar Reescrita de URLs
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Redirecionar tudo para o index.html, exceto se o arquivo ou diretório existir
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# Configurar Cache de Arquivos Estáticos
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|css|js|png|jpg|jpeg|gif|ico|woff|woff2|ttf|otf|eot|svg|json)$">
+    Header set Cache-Control "max-age=31536000, public"
+  </FilesMatch>
+</IfModule>
