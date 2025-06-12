@@ -22,7 +22,11 @@ const style = {
 	border: "2px solid #00000015",
 	boxShadow: 24,
 	borderRadius: 4,
-	p: 4,
+	p: 2,
+	width: "90vw",
+	maxWidth: 500,
+	maxHeight: "90vw",
+	overflowY: "auto",
 };
 
 export const Frete = () => {

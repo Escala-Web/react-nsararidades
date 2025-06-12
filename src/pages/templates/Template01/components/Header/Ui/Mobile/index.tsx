@@ -135,17 +135,20 @@ export const NavigationMobile = () => {
 
 					<Collapse in={openBrands} timeout="auto" unmountOnExit>
 						<List component="div" disablePadding>
-							{findAll?.data?.content?.map((item) => (
+							{findAll?.data?.content?.map((item) =>{ 
+		
+								return (
+							
 								<ListItemButton
 									onClose={toggleDrawer(anchor, false)}
 									component={Link}
-									to={`/produtos?${breandOrYear.toLocaleLowerCase()}=${formatUrl(item?.name)}&id=${item?.id_category}`}
+									to={`/produtos?marcas=${item?.id_brand}`}
 									sx={{ pl: 4 }}
 									onClick={(e) => e.stopPropagation()}
 								>
 									<ListItemText primary={item?.name} />
 								</ListItemButton>
-							))}
+							)})}
 						</List>
 					</Collapse>
 
@@ -166,17 +169,18 @@ export const NavigationMobile = () => {
 
 					<Collapse in={openCategories} timeout="auto" unmountOnExit>
 						<List component="div" disablePadding>
-							{findCategory?.data?.content?.map((item) => (
+							{findCategory?.data?.content?.map((item) =>{ 
+								return (
 								<ListItemButton
 									onClose={toggleDrawer(anchor, false)}
 									component={Link}
-									to={`/produtos?categoria=${formatUrl(item?.name)}&id=${item?.id_category}`}
+									to={`/produtos?categoria=${item?.id_category}`}
 									sx={{ pl: 4 }}
 									onClick={(e) => e.stopPropagation()}
 								>
 									<ListItemText primary={item?.name} />
 								</ListItemButton>
-							))}
+							)})}
 						</List>
 					</Collapse>
 

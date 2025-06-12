@@ -1,11 +1,15 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  min-width: 1440px;
+  width: 100%;
+  max-width: 1440px;
+  padding: 1rem;
   margin: 2rem auto;
-  padding: 0rem;
+  overflow: hidden;
+
   h2 {
     margin-bottom: 1rem;
+    font-size: 1.5rem;
   }
 `;
 
@@ -13,13 +17,17 @@ export const Layout = styled.div`
   display: flex;
   gap: 2rem;
   align-items: flex-start;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const CartList = styled.div`
   flex: 2;
   display: flex;
   flex-direction: column;
-  gap: .2rem;
+  gap: 0.8rem;
 `;
 
 export const CartItemStyled = styled.div`
@@ -30,10 +38,18 @@ export const CartItemStyled = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
+
+  img {
+    width: 80px;
+    height: auto;
+    object-fit: cover;
+  }
 
   .info {
     display: flex;
     flex-direction: column;
+    flex: 1;
   }
 
   .actions {
@@ -54,6 +70,21 @@ export const CartItemStyled = styled.div`
       font-size: 1.1rem;
     }
   }
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .actions {
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    img {
+      width: 100%;
+      max-width: 100px;
+    }
+  }
 `;
 
 export const Summary = styled.div`
@@ -62,6 +93,8 @@ export const Summary = styled.div`
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  width: 100%;
+  box-sizing: border-box;
 
   h3 {
     margin-bottom: 1rem;

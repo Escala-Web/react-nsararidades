@@ -5,7 +5,9 @@ export const Container = styled.div`
 	flex-direction: column;
     gap: 1rem;
 	position: relative;
-
+	@media (max-width: 768px) {
+		width: 100%;
+	}
 
 	box-shadow: 0 0 7px  ${({ theme }) => `${theme.secondary}30`};
 
@@ -13,9 +15,10 @@ export const Container = styled.div`
 
 		padding: 1rem;
 
-		min-width: 390px;
+		max-width: 390px;
+		width: 100%;
 
-		border-radius: '6px';
+		border-radius: 6px;
 		background-color: ${({ theme }) => theme.background};
 
 		

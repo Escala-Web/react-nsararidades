@@ -3,23 +3,24 @@ import styled from "styled-components";
 export const Container = styled.div`
 	display: flex;
 	flex-direction: column;
-
 	gap: 0.6rem;
+	width: 100%;
 
 	.container {
 		display: flex;
+		flex-wrap: wrap;
 		align-items: center;
 		gap: 0.6rem;
+		width: 100%;
 
 		input {
-			width: 36%;
+			/* flex: 1 1 200px; */
+			min-width: 0;
 			font-size: 17px;
 			padding: 0.6rem 1rem;
 			border-radius: 6px;
 			outline: 0;
-
 			background-color: ${({ theme }) => `${theme.primary}20`};
-			border-radius: 6px;
 			border: none;
 		}
 
@@ -29,10 +30,9 @@ export const Container = styled.div`
 			border-radius: 6px;
 			transition: 0.1s;
 			border: none;
-
-			border-radius: 6px;
 			background-color: ${({ theme }) => theme.primary};
 			color: ${({ theme }) => theme.text_third};
+			white-space: nowrap;
 		}
 	}
 `;
@@ -40,50 +40,54 @@ export const Container = styled.div`
 export const ModalContainer = styled.div`
 	display: flex;
 	flex-direction: column;
-
 	gap: 1rem;
 
 	h2 {
 		color: ${({ theme }) => theme.text_secondary};
+		font-size: 1.25rem;
 	}
 
 	.card_container {
 		display: flex;
 		flex-direction: column;
-		gap: 0.4rem;
-
-		min-width: 600px;
+		gap: 0.8rem;
+		width: 100%;
 	}
 
 	.card {
 		border: 1px solid ${({ theme }) => `${theme.primary}20`};
 		width: 100%;
-
-		padding: 0.4rem 0.6rem;
+		padding: 0.8rem;
+		border-radius: 8px;
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
+		box-sizing: border-box;
 	}
 
 	.card_flex {
 		display: flex;
-		align-items: center;
-
 		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 0.5rem;
 
-		p {
-			font-size: 18px;
+		p, strong {
+			font-size: 16px;
 			color: ${({ theme }) => theme.text_secondary};
 		}
 
 		img {
-			background-color: transparent;
-			width: 80px;
+			width: 60px;
+			height: auto;
+			object-fit: contain;
 		}
+	}
 
-		strong {
-			font-size: 18px;
-			color: ${({ theme }) => theme.text_secondary};
+	@media (max-width: 600px) {
+		.card_flex {
+			flex-direction: column;
+			align-items: flex-start;
 		}
 	}
 `;
