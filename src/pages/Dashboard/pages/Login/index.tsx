@@ -1,6 +1,7 @@
 import { FormEvent, useState } from "react";
 import { Container, Formulario } from "./styles";
 import { useAdmin } from "../../../../hooks/admin/useAdmin";
+import { ForgetPassword } from "../../components/ForgetPassword";
 
 export const Login = () => {
 	const { login } = useAdmin();
@@ -45,7 +46,7 @@ export const Login = () => {
 						</div>
 						<div className="form_buttons">
 							<button onClick={handleLogin} className="contain">Entrar</button>
-							<button className="no_contain">Esqueci minha senha</button>
+							<ForgetPassword />
 						</div>
 					</Formulario>
 				</div>

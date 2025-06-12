@@ -11,6 +11,7 @@ import { ActiveStriper } from "../components/ActiveStriper";
 import { FilterProvider } from "../context/Filter";
 import { ScrollToTop } from "../components/ScrollToTop";
 import { Editor } from "../pages/Editor";
+import { ResetPassword } from "../pages/ResetPassword";
 
 export const RouteApp = () => {
 	const { findAllStore } = useStore();
@@ -39,6 +40,7 @@ export const RouteApp = () => {
 						/>
 						<Route path="/administrativo/login" element={<Login />} />
 						<Route path="/administrativo/active-stripe" element={<ActiveStriper />} />
+						<Route path="/administrativo/reset-password" element={<ResetPassword/>}/>
 
 						<Route
 							path="/administrativo/*"

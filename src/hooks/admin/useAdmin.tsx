@@ -60,7 +60,8 @@ export const useAdmin = () => {
             navigate('/login');
         },
         onError: (error) => {
-            // console.log(error)
+            toast.error(error.response.data.message);
+            navigate('administrativo/login');
         }
     })
 

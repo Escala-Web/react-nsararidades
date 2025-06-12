@@ -19,7 +19,8 @@ export const ResetPassword = () => {
         event.preventDefault();
 
         if(password != passwordC) {
-            toast.error('As senhas devem ser iguais')
+            toast.error('As senhas devem ser iguais');
+			return;
         }
 
         resetPasswordLogin.mutate({
