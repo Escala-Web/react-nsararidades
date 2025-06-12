@@ -140,7 +140,8 @@ export const Update = () => {
 							/>
 						</ContentMain>
 
-						<ContentMain>
+						{/* logica de variação depois */}
+						{/* <ContentMain>
 							<Title title="Opções de produto" />
 							<div className="form_block mt-2">
 								<Typography variant="body2">
@@ -149,7 +150,7 @@ export const Update = () => {
 								</Typography>
 								<ModalVariation />
 							</div>
-						</ContentMain>
+						</ContentMain> */}
 
 						{productData.variations.map((variation, index) => (
 							<ContentMain key={variation.id_variant_attribute}>
