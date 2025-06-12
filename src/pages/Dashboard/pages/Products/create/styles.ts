@@ -13,7 +13,7 @@ export const Container = styled.div`
 
 	min-height: 100vh;
 
-	z-index: 9699999;
+	z-index: 1000;
 
 	.mt-2 {
 		margin-top: 2rem;
