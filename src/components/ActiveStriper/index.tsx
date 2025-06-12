@@ -24,7 +24,7 @@ export const ActiveStriper = ({ reason }) => {
 
 	return (
 		<>
-			<DashboardTemplate description="Escala Web é parceira da Stripe para pagementos seguros.">
+			<DashboardTemplate description="Escala Web é parceira da Stripe para pagamentos seguros.">
 				{reason === "inactive" ? (
 					<>
 						<>
@@ -36,7 +36,9 @@ export const ActiveStriper = ({ reason }) => {
 									Por favor, aguarde enquanto a Stripe verifica suas
 									informações.
 								</p>
+								<p>Caso não tenha iniciado o processo de conexão, por favor, clique no botão abaixo</p>
 							</div>
+							<button onClick={handleOnBoarding}>Conectar com Stripe</button>
 						</>
 					</>
 				) : (

@@ -54,9 +54,9 @@ export const DashboardTemplate = ({ children, description }: DashboardTemplatePr
                         <div>
                             <p>{description}</p>
                         </div>
-                        <Link to={"/administrativo"}>
+                        <Link to={"https://escalaweb.com.br"} target="_blank">
                             <IoArrowBackSharp />
-                            <p>Duvidas? entre em contato</p>
+                            <p>Dúvidas? entre em contato</p>
                         </Link>
                     </div>
                     <div className="footer">

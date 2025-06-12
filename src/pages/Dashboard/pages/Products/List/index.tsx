@@ -8,14 +8,8 @@ import { useNavigate } from "react-router-dom";
 import { TableProductsData } from "../../../data/tableProducts";
 // import { TableProductsData } from "../../../data/Admin/TableProducts";
 
-
 export const Products = () => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-    
-
-
-    return (
-<TableProductsData />
-    );
+  return <TableProductsData />;
 };

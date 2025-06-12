@@ -25,6 +25,8 @@ export const useProduct = (page: number = null) => {
 		queryFn: () => productFindAllApi(page),
 	});
 
+	const isLoading = findAllProduct.isLoading;
+
 	const createProduct = useMutation({
 		mutationFn: productCreateApi,
 		onSuccess: (data: IProductResponse) => {
@@ -92,5 +94,5 @@ export const useProduct = (page: number = null) => {
 
 
 
-	return { createProduct, findAllProduct, updateProduct, deleteProduct };
+	return { createProduct, findAllProduct, updateProduct, deleteProduct, isLoading };
 };
