@@ -61,16 +61,23 @@ interface Product {
   sku?: string;
 }
 
-interface TableOrdersProps{
-	data: Order[];
-	paginationModel: {page: number; pageSize: number};
-	setPaginationModel: React.Dispatch<React.SetStateAction<{page: number; pageSize: number}>>;
-	totalCount: number;
+interface TableOrdersProps {
+  data: Order[];
+  paginationModel: { page: number; pageSize: number };
+  setPaginationModel: React.Dispatch<
+    React.SetStateAction<{ page: number; pageSize: number }>
+  >;
+  totalCount: number;
 }
 
-const paginationModel = { page: 0, pageSize: 5 };
+// const paginationModel = { page: 0, pageSize: 5 };
 
-export const TableOrders = ({ data, paginationModel, setPaginationModel, totalCount }: TableOrdersProps) => {
+export const TableOrders = ({
+  data,
+  paginationModel,
+  setPaginationModel,
+  totalCount,
+}: TableOrdersProps) => {
   const [openDetails, setOpenDetails] = useState(false);
   const [openEdit, setOpenEdit] = useState(false);
   const [selectedOrder, setSelectedOrder] = useState<any | null>(null);
@@ -186,11 +193,11 @@ export const TableOrders = ({ data, paginationModel, setPaginationModel, totalCo
         <DataGrid
           rows={rows}
           columns={columns}
-          paginationModel = {paginationModel}
-		  onPaginationModelChange={setPaginationModel}
-		  paginationMode="server"
-		  rowCount={totalCount}
-          sx={{ border: 0 }}
+          paginationModel={paginationModel}
+          onPaginationModelChange={setPaginationModel}
+          paginationMode="server"
+          rowCount={totalCount}
+          pageSizeOptions={[]}
         />
       </Paper>
 

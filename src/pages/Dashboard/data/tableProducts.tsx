@@ -21,10 +21,12 @@ export const TableProductsData = () => {
   //findAllProduct com paginação
   const [page, setPage] = useState(0);
   const [paginationModel, setPaginationModel] = useState({
-	page: 0,
-	pageSize: 40
+    page: 0,
+    pageSize: 40,
   });
-  const { findAllProduct, deleteProduct, isLoading } = useProduct(paginationModel.page + 1);
+  const { findAllProduct, deleteProduct, isLoading } = useProduct(
+    paginationModel.page + 1
+  );
   const [rows, setRows] = useState([]);
   const [openDialog, setOpenDialog] = useState(false);
   const [selectedProductId, setSelectedProductId] = useState<number | null>(
@@ -99,8 +101,8 @@ export const TableProductsData = () => {
   useEffect(() => {
     if (!findAllProduct.data?.content) return;
     console.log(findAllProduct.data?.page);
-	console.log('Página atual:', page);
-  console.log('Conteúdo retornado:', findAllProduct.data.content);
+    console.log("Página atual:", page);
+    console.log("Conteúdo retornado:", findAllProduct.data.content);
 
     const parsedRows = findAllProduct.data.content.flatMap((product: any) =>
       product.variations
@@ -133,11 +135,11 @@ export const TableProductsData = () => {
         <DataGrid
           rows={rows}
           columns={columns}
-		  paginationModel={paginationModel}
+          paginationModel={paginationModel}
           onPaginationModelChange={setPaginationModel}
           paginationMode="server"
           rowCount={findAllProduct.data?.page?.total || 0} // total de produtos
-		  loading={isLoading}
+          loading={isLoading}
         />
       </div>
 

@@ -113,7 +113,7 @@ export const Register = () => {
 
 							<div className="form_flex mt">
 								<div className="form_block">
-									<label htmlFor="number">Telefone</label>
+									<label htmlFor="number">Celular</label>
 									<IMaskInput
 										mask="(00) 00000-0000"
 										type="tel"
