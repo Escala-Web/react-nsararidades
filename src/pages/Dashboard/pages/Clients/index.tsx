@@ -3,14 +3,14 @@ import { CardDashboard } from "../../components/CardDashboard";
 import { Container } from "./styles";
 import { useUserAdmin } from "../../../../hooks/users/useUserAdmin";
 import { TableUser } from "./TableUser";
+import { useState } from "react";
 
 
 export const Clients = () => {
 
-    const { data: users } = useUserAdmin(1)
-
-    console.log(users)
-
+    const [paginationModel, setPaginationModel] = useState({page: 0, pageSize: 25});
+    const { data: users } = useUserAdmin(paginationModel.page + 1);
+    const total:number = users?.pages?.total;
 
     return (
         <>
@@ -41,7 +41,7 @@ export const Clients = () => {
                         // data={client?.content.length}
                     /> */}
                 </div>
-                <TableUser data={users?.content}/>
+                <TableUser data={users?.content} paginationModel={paginationModel} setPagination={setPaginationModel} total={total}/>
             </Container>
         </>
     )

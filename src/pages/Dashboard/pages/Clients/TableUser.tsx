@@ -8,7 +8,12 @@ import { IUser } from '../../../../types/IUsers';
 
 const paginationModel = { page: 0, pageSize: 5 };
 
-export const TableUser = ({ data }: {data: IUser}) => {
+export const TableUser = ({ data, paginationModel, setPagination, total }: {
+  data: IUser; 
+  paginationModel: {page: number, pageSize: number};
+  setPagination: React.Dispatch<React.SetStateAction<{page:number; pageSize: number;}>>;
+  total: number;
+ }) => {
 
   const columns = [
     { field: 'nome_usuario', headerName: 'Nome', width: 200 },
@@ -46,9 +51,11 @@ export const TableUser = ({ data }: {data: IUser}) => {
       <DataGrid
         rows={rows}
         columns={columns}
-        initialState={{ pagination: { paginationModel } }}
-        // pageSizeOptions={[5, 10]}
-        checkboxSelection
+        paginationModel={paginationModel}
+        onPaginationModelChange={setPagination}
+        paginationMode='server'
+        rowCount={total}
+        pageSizeOptions={[]}
         sx={{ border: 0 }}
       />
     </Paper>
